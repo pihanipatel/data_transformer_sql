@@ -38,20 +38,20 @@ VALUES
 
 
 ## Q-1
-SELECT *
+SELECT order_id,customer_id
 FROM order_table AS o
 INNER JOIN customer_table AS c
 ON o.customer_id = c.customer_id
 WHERE order_id IS NOT NULL;
 
 ## Q - 2
-SELECT * 
+SELECT customer_id,order_id
 FROM customer_table AS c
 LEFT JOIN order_table AS o
 ON c.customer_id = o.customer_id;
 
 ## Q - 3
-SELECT * 
+SELECT customer_id,order_id
 FROM order_table AS o
 RIGHT JOIN customer_table AS c
 ON o.customer_id = c.customer_id;
